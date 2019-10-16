@@ -1,0 +1,7 @@
+.ui.list{
+    font-size: 20px;
+}
+
+.ui.list .item .content{
+    line-height: 2em;
+}
