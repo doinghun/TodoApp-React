@@ -6,6 +6,7 @@ class TaskAdd extends React.Component{
     onFormSubmit = (event) => {
         event.preventDefault();
         this.props.onSubmit(this.state.task)
+        this.setState({task: ''})
     }
 
     render(){
