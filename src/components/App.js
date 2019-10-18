@@ -45,6 +45,7 @@ class App extends React.Component {
         })
         .then(res => {
             console.log(res.data);
+            this.fetchTasks();
         })
         .catch((err) => {console.error(err)})
     }

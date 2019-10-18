@@ -1,23 +1,22 @@
 import './TaskList.css' 
 import React from 'react';
-import TaskDeleteButton from './TaskDeleteButton'
+import TaskItems from './TaskItems';
 
 class TaskList extends React.Component{
     
+    handleCheckboxClick = (is_done, id) => {
+        this.props.updateTask(is_done, id)
+    }
+
     taskTitle() {
         return(
             this.props.tasks.map((task) => {
                 return(
-                <div className="item"  key={task.id}>
-                     <div className="left floated content">
-                        <div className="ui fitted checkbox">
-                            <input type="checkbox" onChange = {() => this.props.updateTask(task.is_done,task.id)}></input>
-                            <label></label>
-                        </div>
-                    </div>
-                    <TaskDeleteButton/>
-                    <div className="content">{task.title}</div>
-                </div>
+                    <TaskItems
+                     key={task.id}
+                     {...task}
+                     onClick={() => this.handleCheckboxClick(task.is_done,task.id)}
+                     />
                 )
             })
         )
