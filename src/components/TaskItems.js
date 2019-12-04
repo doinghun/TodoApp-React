@@ -3,13 +3,14 @@ import React from "react";
 
 class TaskItems extends React.Component {
   renderCheckbox() {
+    const id = this.props.id;
     const isDone = this.props.is_done;
     return (
       <div className="left floated content">
         <div className="ui fitted checkbox">
           <input
             type="checkbox"
-            onClick={() => this.props.onClick()}
+            onClick={() => this.handleCheckboxClick(isDone, id)}
             defaultChecked={isDone === true ? true : false}
           ></input>
           <label></label>
@@ -19,15 +20,17 @@ class TaskItems extends React.Component {
   }
 
   renderDeleteButton() {
+    const id = this.props.id;
+    const index = this.props.index;
     return (
-      <form
-        className="right floated content"
-        onSubmit={() => this.props.onSubmit()}
-      >
-        <button className="circular ui basic icon button">
+      <div className="right floated content">
+        <button
+          className="circular ui basic icon button"
+          onClick={() => this.handleButtonClick(id, index)}
+        >
           <i className="times icon"></i>
         </button>
-      </form>
+      </div>
     );
   }
 
@@ -53,6 +56,14 @@ class TaskItems extends React.Component {
       </div>
     );
   }
+
+  handleCheckboxClick = (is_done, id) => {
+    this.props.updateTask(is_done, id);
+  };
+
+  handleButtonClick = (id, index) => {
+    this.props.deleteTask(id, index);
+  };
 }
 
 export default TaskItems;
