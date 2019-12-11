@@ -1,0 +1,21 @@
+body#style {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-width: 320px;
+    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 1.4285em;
+    color: black;
+    background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+    /* background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%); */
+}
+
+div.item {
+    font-size: 20px;
+}
+
+h2 {
+    color: white;
+}
