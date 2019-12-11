@@ -1,16 +1,6 @@
 {
   "todo": [
     {
-      "title": "test1",
-      "isDone": false,
-      "id": 1
-    },
-    {
-      "title": "test2",
-      "isDone": true,
-      "id": 2
-    },
-    {
       "title": "test3",
       "isDone": true,
       "id": 3

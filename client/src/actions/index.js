@@ -9,37 +9,37 @@ import {
 import todo from "../api/todo"
 
 export const createTodo = formValues => async dispatch => {
-  const response = await todo.post("/todo", { ...formValues })
+  const response = await todo.post("/api/todo", { ...formValues })
 
   dispatch({ type: CREATE_TODO, payload: response.data })
 }
 
 export const fetchTodos = () => async dispatch => {
-  const response = await todo.get("/todo")
+  const response = await todo.get("/api/todo")
 
   dispatch({ type: FETCH_TODOS, payload: response.data })
 }
 
 export const fetchTodo = id => async dispatch => {
-  const response = await todo.get(`/todo/${id}`)
+  const response = await todo.get(`/api/todo/${id}`)
 
   dispatch({ type: FETCH_TODO, payload: response.data })
 }
 
 export const editTodo = (id, formValues) => async dispatch => {
-  const response = await todo.patch(`/todo/${id}`, formValues)
+  const response = await todo.patch(`/api/todo/${id}`, formValues)
 
   dispatch({ type: EDIT_TODO, payload: response.data })
 }
 
 export const updateTodo = (id, isDone) => async dispatch => {
-  const response = await todo.patch(`/todo/${id}`, { isDone: isDone })
+  const response = await todo.patch(`/api/todo/${id}`, { isDone: isDone })
 
   dispatch({ type: UPDATE_TODO, payload: response.data })
 }
 
 export const deleteTodo = id => async dispatch => {
-  await todo.delete(`/todo/${id}`)
+  await todo.delete(`/api/todo/${id}`)
 
   dispatch({ type: DELETE_TODO, payload: id })
 }
