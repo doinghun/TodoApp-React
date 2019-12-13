@@ -1,9 +1,19 @@
 {
   "todo": [
     {
-      "title": "test3",
+      "title": "Build ToDo React App",
       "isDone": true,
       "id": 3
+    },
+    {
+      "title": "Deploy ToDo React App",
+      "isDone": true,
+      "id": 4
+    },
+    {
+      "title": "Get hired as Front End Developer",
+      "isDone": false,
+      "id": 5
     }
   ]
 }
