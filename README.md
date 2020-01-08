@@ -1,5 +1,22 @@
 # TodoApp-React
-React Todo App
+
+Built with 🏗️
+---
+Client
+
+- React
+- Redux
+- Redux-thunk
+- styled-components
+
+Server (Fake REST API)
+
+- Express
+- json-server
+
+Features 👀
+---
+Basic Create, Read, Update, Delete (CRUD) functionality
 
 ## Set up 
 
